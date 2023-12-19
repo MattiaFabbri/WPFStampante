@@ -1,6 +1,8 @@
 # Progetto WPF Stampante
 
-Questo progetto **WPF** implementa un'applicazione di simulazione per una stampante, consentendo agli utenti di stampare pagine e monitorare lo stato.
+## Descrizione
+
+Questo progetto implementa due classi principali, `Stampante` e `Pagina`, che simulano il funzionamento di una stampante a colori. La stampante ha quattro serbatoi di inchiostro per i colori Ciano, Magenta, Giallo e Nero (abbreviati come CMYB) e un cassetto di fogli. La classe `Pagina` rappresenta una pagina da stampare con attributi CMYB.
 
 ## Struttura del Codice
 
