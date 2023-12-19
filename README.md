@@ -8,9 +8,29 @@ Questo progetto **WPF** implementa un'applicazione di simulazione per una stampa
 
 Il file `MainWindow.xaml.cs` contiene la logica dietro l'interfaccia utente dell'applicazione, inclusi i gestori degli eventi dei pulsanti e i metodi di interazione con la classe `Stampante` e `Pagina`.
 
-### MainWindow.xaml
+#### `MainWindow()`
 
-Il file `MainWindow.xaml` definisce la struttura dell'interfaccia utente dell'applicazione. Qui sono presenti i controlli e gli elementi visivi che consentono agli utenti di interagire con la simulazione della stampante.
+Il costruttore inizializza la finestra principale e crea un'istanza della classe `Stampante`.
+
+#### `Stampa_Click(object sender, RoutedEventArgs e)`
+
+Gestisce l'evento di clic sul pulsante "Stampa". Crea una nuova istanza della classe `Pagina` utilizzando i valori inseriti dall'utente e chiama il metodo `Stampa` della stampante.
+
+#### `StampaRandom_Click(object sender, RoutedEventArgs e)`
+
+Gestisce l'evento di clic sul pulsante "Stampa Random". Crea una nuova istanza casuale della classe `Pagina` e chiama il metodo `Stampa` della stampante.
+
+#### `ControlloValore(object sender, TextCompositionEventArgs e)`
+
+Gestisce l'evento di composizione del testo nei campi di input, limitando i caratteri consentiti.
+
+#### `riempiCiano_Click(object sender, RoutedEventArgs e)`, `riempiGiallo_Click(object sender, RoutedEventArgs e)`, `riempiMagenta_Click(object sender, RoutedEventArgs e)`, `riempiNero_Click(object sender, RoutedEventArgs e)`
+
+Gestiscono gli eventi di clic sui pulsanti di ricarica colore, chiamando i rispettivi metodi di `SostituisciColore` della stampante.
+
+#### `RicaricaFogli_Click(object sender, RoutedEventArgs e)`
+
+Gestisce l'evento di clic sul pulsante "Ricarica Fogli", aggiornando la quantità di fogli nel cassetto chiamando il metodo `AggiungiCarta` della stampante.
 
 ### Stampante.cs
 
